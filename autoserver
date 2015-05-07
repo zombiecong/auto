@@ -56,6 +56,8 @@ dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 export DIR=$dir
 export PROJECT=$1
 
+echo '设置文件可写权限'
+chmod www-data:www-data $dir
 
 echo '创建并链接uwsgi配置文件'
 cat templates/uwsgi.tmp | ./mo  > "$1_uwsgi.ini"
