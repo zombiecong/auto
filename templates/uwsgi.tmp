@@ -1,0 +1,10 @@
+[uwsgi]
+chdir           = {{DIR}}/{{PROJECT}}
+wsgi-file       = {{DIR}}/{{PROJECT}}/{{PROJECT}}/wsgi.py
+home            = {{DIR}}/{{PROJECT}}.virtualenv
+master          = true
+processes       = 10
+socket          = {{DIR}}/{{PROJECT}}.sock
+chmod-socket    = 666
+vacuum          = true
+env             = LC_ALL=zh_CN.UTF-8

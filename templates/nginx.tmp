@@ -1,0 +1,26 @@
+upstream {{PROJECT}} {
+    server unix://{{DIR}}/{{PROJECT}}.sock;
+}
+
+server {
+    listen      {{PORT}};
+    server_name {{DOMAIN}};
+    charset     utf-8;
+
+    client_max_body_size 75M;
+
+    location /static {
+        alias {{DIR}}/{{PROJECT}}/static; 
+    }
+
+
+    location /upload {
+        alias {{DIR}}/{{PROJECT}}/upload;
+        expires 30d;
+    }
+
+    location / { 
+        uwsgi_pass  {{PROJECT}};
+        include     /etc/nginx/uwsgi_params;
+    }
+}

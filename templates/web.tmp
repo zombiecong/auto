@@ -1,0 +1,17 @@
+server{
+    listen {{ port }};
+
+    client_max_body_size 20M;
+
+    server_name {{ domain }}
+
+    location / {
+        alias /var/www/{{ site_name }}/src;
+        index index.html;
+    }
+
+    location /assets/ {
+        alias /var/www/{{ site_name }}/asset;
+        expires 30d;
+    }
+}

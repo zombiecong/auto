@@ -1,0 +1,3 @@
+#!/bin/sh -e
+uwsgi --emperor /etc/uwsgi/sites-enabled --uid www-data --gid www-data
+exit 0
