@@ -59,7 +59,7 @@ export PROJECT=$1
 
 echo '创建并链接uwsgi配置文件'
 cat templates/uwsgi.tmp | ./mo  > "$1_uwsgi.ini"
-ln -s "$1_uwsgi.ini" /etc/uwsgi/sites-enabled/
+ln -s "$dir/$1_uwsgi.ini" /etc/uwsgi/sites-enabled/
 
 
 echo '创建并链接nginx配置文件'
