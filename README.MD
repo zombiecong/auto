@@ -6,9 +6,12 @@
 
 **完成python3,virtualenv,uwsgi,nginx,pip3**
 
-Usage
+##Usage
 
+ 
+```bash
 $ source autohost
+```
 
 -----
 #多站点服务器自动化部署lv2
