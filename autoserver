@@ -28,6 +28,9 @@ source $1'.virtualenv/bin/activate'
 echo '进入项目...'
 cd $1
 
+echo '创建本地配置文件'
+touch "$1/settings_local.py"
+
 if [ ! -f 'requirement.txt' ]; then
     echo '没有发现requirement.txt'
     return
