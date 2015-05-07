@@ -2,8 +2,13 @@
 
 ##Requirment
 > * ubuntu trusty
+> * git
 
 **完成python3,virtualenv,uwsgi,nginx,pip3**
+
+Usage
+
+$ source autohost
 
 -----
 #多站点服务器自动化部署lv2

@@ -13,10 +13,4 @@ read -p "reboot now?[y/n]" res
 if [ $res == 'y' ] || [ $res == 'Y' ]; then
     reboot
     return
-
 fi
-
-source uwsgi_rc
-
-echo 'finish!'
-
