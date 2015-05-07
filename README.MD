@@ -13,7 +13,6 @@
 $ source autohost
 ```
 
------
 #多站点服务器自动化部署lv2
 
 ##Requirment
@@ -43,7 +42,7 @@ $ source autoserver rmconfig
 ```
 
 
------
+
 #多站点服务器自动化部署lv3
 
 
@@ -55,7 +54,6 @@ $ source autoserver rmconfig
 
 
 
------
 
 #Rule
 
