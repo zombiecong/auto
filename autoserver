@@ -10,6 +10,13 @@ if [ $1 == 'finish' ]; then
     return
 fi
 
+if [ $1 == 'rmconfig' ]; then
+    echo 'rm...'
+    rm /etc/nginx/sites-enabled/* /etc/uwsgi/sites-enabled/*
+    return
+fi
+
+
 if [ ! -d $1 ]; then
     echo "请输入正确的路径";return
 fi
