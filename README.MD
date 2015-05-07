@@ -57,7 +57,7 @@ $ source autoserver rmconfig
 
 -----
 
-Rule:
+#Rule
 
 > * django的服务端的配置放在settings_loca.py (自动创建)
 > * django的settings.py 增加  **STATIC_ROOT = os.path.join(BASE_DIR,  'static')** 和 **MEDIA_ROOT = os.path.join(BASE_DIR,  'upload') **
@@ -66,7 +66,7 @@ Rule:
 
 
 
-Future:
+#Future
 
 > * autohost 增加自定义apt-get包 
 
