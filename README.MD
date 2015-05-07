@@ -31,6 +31,18 @@ $ source autohost
 ```bash
 $ source autoserver project
 ```
+lv2
+
+```bash
+$ source autoserver rmself
+```
+删除autoserver
+
+```bash
+$ source autoserver rmconfig
+```
+删除uwsgi和nginx相关配置文件
+
 -----
 #多站点服务器自动化部署lv3
 
@@ -40,3 +52,25 @@ $ source autoserver project
 
 
 **完成静态页面部署**
+
+
+
+-----
+
+Rule:
+
+> * django的服务端的配置放在settings_loca.py (自动创建)
+> * django的settings.py 增加  **STATIC_ROOT = os.path.join(BASE_DIR,  'static')** 和 **MEDIA_ROOT = os.path.join(BASE_DIR,  'upload') **
+> * uwsgi 总的 log 放在 /var/log/uwsgi.log
+> * uwsgi 子项目的 log 放在 /var/log/uwsgi/ xx.log
+
+
+
+Future:
+
+> * 增加 autohost 自定义apt-get包 
+
+
+
+
+

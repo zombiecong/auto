@@ -1,11 +1,11 @@
 #!/bin/bash
 if [ $# != 1 ]; then
-    echo "用法:source $0 [project] \n"
+    echo -e "用法:\n    source autoserver [project] \n    source autoserver rmself   : 删除autoserver \n    source autoserver rmconfig : 删除uwsgi和nginx中sites-enabled所有配置"
     return
 fi
 
-if [ $1 == 'finish' ]; then
-    echo 'bye'
+if [ $1 == 'rmself' ]; then
+    echo 'rm...'
     rm -rf templates mo README.MD test.sh
     return
 fi
