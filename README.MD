@@ -1,6 +1,9 @@
 #多站点服务器自动化部署lv1
 
-**完成python3,virtualenv,uwsgi,nginx,pip**
+##Requirment
+> * ubuntu trusty
+
+**完成python3,virtualenv,uwsgi,nginx,pip3**
 
 -----
 #多站点服务器自动化部署lv2
