@@ -27,21 +27,21 @@ $ source autohost
 
 ##Usage
 
- 
+**lv2** 
 ```bash
 $ source autoserver project
 ```
-lv2
+**删除autoserver**
 
 ```bash
 $ source autoserver rmself
 ```
-删除autoserver
+**删除uwsgi和nginx相关配置文件**
 
 ```bash
 $ source autoserver rmconfig
 ```
-删除uwsgi和nginx相关配置文件
+
 
 -----
 #多站点服务器自动化部署lv3
@@ -68,7 +68,7 @@ Rule:
 
 Future:
 
-> * 增加 autohost 自定义apt-get包 
+> * autohost 增加自定义apt-get包 
 
 
 
