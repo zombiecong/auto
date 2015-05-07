@@ -8,3 +8,5 @@ socket          = {{DIR}}/{{PROJECT}}.sock
 chmod-socket    = 666
 vacuum          = true
 env             = LC_ALL=zh_CN.UTF-8
+daemonize       = /var/log/uwsgi/{{PROJECT}}.log
+

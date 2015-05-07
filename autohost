@@ -6,9 +6,9 @@ pip3 install virtualenv
 
 mkdir -p /etc/uwsgi/sites-enabled
 
-cat uwsgi_rc > /etc/rc.local
+cp uwsgi.conf /etc/init/
 
-read -p "reboot now?[y/n]" res 
+read -p "reboot now ? [y/n]" res 
 
 if [ $res == 'y' ] || [ $res == 'Y' ]; then
     reboot
