@@ -5,6 +5,7 @@ pip3 install uwsgi
 pip3 install virtualenv
 
 mkdir -p /etc/uwsgi/sites-enabled
+mkdir /var/log/uwsgi
 
 cp uwsgi.conf /etc/init/
 
