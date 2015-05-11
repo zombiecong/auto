@@ -18,16 +18,19 @@ fi
 
 if [ ! -d "/etc/uwsgi/sites-enabled" ]; then
     mkdir -p /etc/uwsgi/sites-enabled
+fi
 
 if [ ! -d "/var/log/uwsgi" ]; then
     mkdir /var/log/uwsgi
+fi
 
 if [ ! -f "/etc/init/uwsgi.conf"]; then
     cp uwsgi.conf /etc/init/
+fi
+
 
 read -p "reboot now ? [y/n]" res 
 
 if [ $res == 'y' ] || [ $res == 'Y' ]; then
     reboot
-    exit
 fi
