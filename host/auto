@@ -1,0 +1,29 @@
+#!/bin/bash
+echo '载入配置文件...'
+. cfg.ini
+
+apt-get update
+
+apt-get -y install gcc python3-setuptools python3-pip python3.4-dev nginx
+
+if [ ! $add-apt == '' ];then
+    apt-get -y install $add-apt
+fi 
+
+pip3 install uwsgi virtualenv 
+
+if [ ! $add-pip == '' ];then
+    pip3 install $add-pip
+fi
+
+mkdir -p /etc/uwsgi/sites-enabled
+mkdir /var/log/uwsgi
+
+cp uwsgi.conf /etc/init/
+
+read -p "reboot now ? [y/n]" res 
+
+if [ $res == 'y' ] || [ $res == 'Y' ]; then
+    reboot
+    return
+fi

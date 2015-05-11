@@ -1,12 +1,6 @@
 #!/bin/bash
 if [ $# != 1 ]; then
-    echo -e "用法:\n    source autoserver [project] \n    source autoserver rmself   : 删除autoserver \n    source autoserver rmconfig : 删除uwsgi和nginx中sites-enabled所有配置"
-    return
-fi
-
-if [ $1 == 'rmself' ]; then
-    echo 'rm...'
-    rm -rf templates mo README.MD test.sh
+    echo -e "用法:\n    source autoserver [project] \n    source autoserver rmconfig : 删除uwsgi和nginx中sites-enabled所有配置"
     return
 fi
 
@@ -20,6 +14,9 @@ fi
 if [ ! -d $1 ]; then
     echo "请输入正确的路径";return
 fi
+
+read -p "输入配置的域名 : " domain
+read -p "输入配置的端口 : " port
 
 if [ -d $1'.virtualenv' ]; then
     echo '虚拟环境已创建，正在进入...'
@@ -47,8 +44,9 @@ fi
 echo '正在安装所需软件包...'
 pip3 install -r requirement.txt
 
+
 echo '集合静态文件'
-python3 manage.py collectstatic
+python3 manage.py collectstatic --noinput
 
 echo '正在创建数据库...'
 python3 manage.py migrate
@@ -69,8 +67,6 @@ ln -s "$dir/$1_uwsgi.ini" /etc/uwsgi/sites-enabled/
 
 
 echo '创建并链接nginx配置文件'
-read -p "输入配置的域名 : " domain
-read -p "输入配置的端口 : " port
 
 export PORT=$port
 export DOMAIN=$domain
