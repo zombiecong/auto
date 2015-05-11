@@ -6,13 +6,13 @@ apt-get update
 
 apt-get -y install gcc python3-setuptools python3-pip python3.4-dev nginx
 
-if [ ! $add-apt == '' ];then
+if [ ! $add_apt == '' ];then
     apt-get -y install $add_apt
 fi 
 
 pip3 install uwsgi virtualenv 
 
-if [ ! $add-pip == '' ];then
+if [ ! $add_pip == '' ];then
     pip3 install $add_pip
 fi
 

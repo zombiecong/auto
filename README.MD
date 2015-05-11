@@ -22,7 +22,7 @@
 ```bash
 $ git clone http://learning-tech.com:8901/lt/auto.git
 $ cd auto/host
-$ sh auto
+$bash auto
 ```
 安装完后,输入 y 重启系统
 
