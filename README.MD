@@ -14,8 +14,8 @@
 
 可在配置文件cfg.ini中,自定义额外的apt-get 和pip 需要安装的包,格式为:
 
-	add-apt="x1 x2"
-	add-pip="x1 x2"
+	add_apt="x1 x2"
+	add_pip="x1 x2"
 
 
  
