@@ -24,7 +24,7 @@ if [ ! -d "/var/log/uwsgi" ]; then
     mkdir /var/log/uwsgi
 fi
 
-if [ ! -f "/etc/init/uwsgi.conf"]; then
+if [ ! -f "/etc/init/uwsgi.conf" ]; then
     cp uwsgi.conf /etc/init/
 fi
 
