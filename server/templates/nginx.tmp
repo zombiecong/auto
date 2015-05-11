@@ -1,5 +1,5 @@
 upstream {{PROJECT}} {
-    server unix://{{DIR}}/{{PROJECT}}.sock;
+    server unix:///tmp/{{PROJECT}}.sock;
 }
 
 server {
