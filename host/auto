@@ -16,10 +16,14 @@ if [ ! $add_pip == '' ];then
     pip3 install $add_pip
 fi
 
-mkdir -p /etc/uwsgi/sites-enabled
-mkdir /var/log/uwsgi
+if [ ! -d "/etc/uwsgi/sites-enabled" ]; then
+    mkdir -p /etc/uwsgi/sites-enabled
 
-cp uwsgi.conf /etc/init/
+if [ ! -d "/var/log/uwsgi" ]; then
+    mkdir /var/log/uwsgi
+
+if [ ! -f "/etc/init/uwsgi.conf"]; then
+    cp uwsgi.conf /etc/init/
 
 read -p "reboot now ? [y/n]" res 
 
