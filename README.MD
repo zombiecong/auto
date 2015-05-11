@@ -1,16 +1,16 @@
-#多站点服务器自动化部署lv1
+# 多站点服务器自动化部署lv1
 
-##Requirment
+## Requirment
 > * ubuntu trusty
 > * git
 
-##Achievement
+## Achievement
 
 > * lv1实现主机部署
 > * apt-get 默认自动化安装 python3.4-dev, nginx , gcc , python3-setuptools ,  python3-pip   
 > * pip3 默认自动化安装 uwsgi, virtualenv 
 
-##Usage
+## Usage
 
 可在配置文件cfg.ini中,自定义额外的apt-get 和pip 需要安装的包,格式为:
 
@@ -26,9 +26,9 @@ $ source autohost
 ```
 安装完后,输入 y 重启系统
 
-#多站点服务器自动化部署lv2
+# 多站点服务器自动化部署lv2
 
-##Requirment
+## Requirment
 > * python3.4
 > * pip
 > * uwsgi
@@ -37,7 +37,7 @@ $ source autohost
 
 
 
-##Achievement
+## Achievement
 
 > * lv2实现服务器部署
 > * 创建虚拟环境
@@ -49,7 +49,7 @@ $ source autohost
 
 
 
-##Usage
+## Usage
 
 自动化配置 server
 ```bash
@@ -64,17 +64,17 @@ $ source autoserver rmconfig
 
 
 
-#多站点服务器自动化部署lv3
+# 多站点服务器自动化部署lv3
 
 
-##Requirment
+## Requirment
 > * api 接口
 
 
 **完成静态页面部署**
 
 
-##Rule
+## Rule
 
 > * project/app/settings.py ,保证 project 和 app的文件夹名相同
 > * django的服务端的配置放在settings_loca.py (自动创建)
