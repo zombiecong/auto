@@ -59,11 +59,11 @@ cd ..
 
 dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 export DIR=$dir
-export PROJECT=$1
+export PROJECT=$(basename $1)
 
 echo '创建并链接uwsgi配置文件'
-cat templates/uwsgi.tmp | ./mo  > "$1_uwsgi.ini"
-ln -s "$dir/$1_uwsgi.ini" /etc/uwsgi/sites-enabled/
+cat templates/uwsgi.tmp | ./mo  > $PROJECT"_uwsgi.ini"
+ln -s "$dir/"$PROJECT"_uwsgi.ini" /etc/uwsgi/sites-enabled/
 
 
 echo '创建并链接nginx配置文件'
@@ -71,7 +71,7 @@ echo '创建并链接nginx配置文件'
 export PORT=$port
 export DOMAIN=$domain
 
-cat templates/nginx.tmp | ./mo  > "$1_nginx.conf"
+cat templates/nginx.tmp | ./mo  > $PROJECT"_nginx.conf"
 ln -s "$dir/$1_nginx.conf" /etc/nginx/sites-enabled/
 
 echo '重启uwsgi'
