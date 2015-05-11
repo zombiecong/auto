@@ -21,8 +21,8 @@
  
 ```bash
 $ git clone http://learning-tech.com:8901/lt/auto.git
-$ cd auto
-$ source autohost
+$ cd auto/host
+$ bash auto
 ```
 安装完后,输入 y 重启系统
 

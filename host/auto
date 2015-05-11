@@ -25,5 +25,5 @@ read -p "reboot now ? [y/n]" res
 
 if [ $res == 'y' ] || [ $res == 'Y' ]; then
     reboot
-    return
+    exit
 fi
