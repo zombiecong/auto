@@ -12,13 +12,6 @@
 > * Ubuntu 14.04 Server LTS (Trusty)
 > * Git
 
-### 使用方法
-
-可在配置文件host/config.ini中，修改以下两行配置，以添加需要通过 apt-get 和 pip 额外安装的软件包，
-
-	add_apt="x1 x2"
-	add_pip="x3 x4"
-
 通过以下命令安装本程序，并进行服务器初始化，
  
 ```bash
@@ -48,7 +41,7 @@ $ bash auto
 
 ### 部署方法
 
-1. 将欲部署的Django项目复制到名为[project-dir](project的父目录名)的目录
+1. 将欲部署的Django项目复制到名为[project-dir]  (project的父目录名) 的目录
 
 2. 使用本程序，初始化名称为[project-name]的子站点于给定的[project-dir]目录
 
@@ -70,6 +63,14 @@ $ source auto rmself
 ```bash
 $ source auto rmconfig
 ```
+### 使用方法
+
+如果需要额外增加自定义包,可在配置文件host/config.ini中，修改以下两行配置，以添加需要通过 apt-get 和 pip 额外安装的软件包，
+
+	add_apt="x1 x2"
+	add_pip="x3 x4"
+
+
 
 ### 实现结果
 
