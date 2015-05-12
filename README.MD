@@ -51,15 +51,21 @@ $ bash auto
 
 ## Usage
 
-自动化配置 server
+**自动化配置 server**
 ```bash
-$ source autoserver path-to-project
+$ cp auto/server/* project-dir
+$ cd project-dir
+$ source auto project
+```
+
+**安装完后,rmself删除安装文件**
+```bash
+$ source auto rmself
 ```
 
 **删除uwsgi和nginx相关配置文件**(/etc/nginx/site-enabled和/etc/uwsgi/site-enabled里的配置文件)
-
 ```bash
-$ source autoserver rmconfig
+$ source auto rmconfig
 ```
 
 

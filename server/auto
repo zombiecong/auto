@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ $# != 1 ]; then
-    echo -e "用法:\n    source autoserver [project] \n    source autoserver rmconfig : 删除uwsgi和nginx中sites-enabled所有配置"
+    echo -e "用法:\n    source auto [project] \n    source auto rmself 删除server安装文件 \n    source auto rmconfig 删除uwsgi和nginx中sites-enabled所有配置"
     return
 fi
 
@@ -9,6 +9,13 @@ if [ $1 == 'rmconfig' ]; then
     rm /etc/nginx/sites-enabled/* /etc/uwsgi/sites-enabled/*
     return
 fi
+
+if [ $1 == 'rmself' ]; then
+    echo 'rm...'
+    rm -rf auto mo templates
+    return
+fi
+
 
 
 if [ ! -d $1 ]; then
