@@ -48,7 +48,7 @@ $ bash auto
 
 ### 部署方法
 
-1. 将欲部署的Django项目复制到名为[project-dir]的目录
+1. 将欲部署的Django项目复制到名为[project-dir](project的父目录名)的目录
 
 2. 使用本程序，初始化名称为[project-name]的子站点于给定的[project-dir]目录
 
