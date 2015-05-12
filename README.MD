@@ -22,8 +22,8 @@
 通过以下命令安装本程序，并进行服务器初始化，
  
 ```bash
-$ git clone http://learning-tech.com:8901/lt/auto.git
-$ cd auto/host
+$ git clone http://learning-tech.com:8901/lt/django_auto_deploy.git
+$ cd django_auto_deploy/host
 $ bash auto
 ```
 安装完后,输入 y 重启系统。
@@ -53,7 +53,7 @@ $ bash auto
 2. 使用本程序，初始化名称为[project-name]的子站点于给定的[project-dir]目录
 
 ```bash
-$ cp auto/server/* [project-dir]
+$ cp django_auto_deploy/server/* [project-dir]
 $ cd [project-dir]
 $ source auto create [project-name]
 ```
