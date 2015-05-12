@@ -1,6 +1,6 @@
 #!/bin/bash
 echo '载入配置文件...'
-. cfg.ini
+. config.ini
 
 apt-get update
 
