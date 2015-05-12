@@ -14,7 +14,7 @@
 
 ### 使用方法
 
-可在配置文件config.ini中，修改以下两行配置，以添加需要通过 apt-get 和 pip 额外安装的软件包，
+可在配置文件host/config.ini中，修改以下两行配置，以添加需要通过 apt-get 和 pip 额外安装的软件包，
 
 	add_apt="x1 x2"
 	add_pip="x3 x4"
@@ -53,15 +53,22 @@ $ bash auto
 2. 使用本程序，初始化名称为[project-name]的子站点于给定的[project-dir]目录
 
 ```bash
-$ cp django_auto_deploy/server/* [project-dir]
+$ cp -r django_auto_deploy/server/* [project-dir]
 $ cd [project-dir]
-$ source auto create [project-name]
+$ source auto [project-name]
 ```
 
 3. 自动配置完成后，删除本程序自身文件
 
 ```bash
 $ source auto rmself
+```
+
+4. 配置错误时,删除配置文件
+
+
+```bash
+$ source auto rmconfig
 ```
 
 ### 实现结果
@@ -91,7 +98,7 @@ $ source auto rmself
 
 > * project/app/settings.py ,保证 project 和 app的文件夹名相同
 > * django的服务端的配置放在settings_local.py (自动创建)
-> * django的settings.py 增加  **STATIC_ROOT = os.path.join(BASE_DIR,  'static')** 和 **MEDIA_ROOT = os.path.join(BASE_DIR,  'upload') **
+> * django的settings.py 增加  STATIC_ROOT = os.path.join(BASE_DIR,  'static') 和   MEDIA_ROOT = os.path.join(BASE_DIR,  'upload') 
 > * uwsgi 总的 log 放在 /var/log/uwsgi.log
 > * uwsgi 子项目的 log 放在 /var/log/uwsgi/ xx.log
 
