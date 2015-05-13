@@ -4,7 +4,7 @@ echo '载入配置文件...'
 
 apt-get update
 
-apt-get -y install gcc python3-setuptools python3-pip python3.4-dev nginx
+apt-get -y install gcc python3-setuptools python3-pip python3.4-dev nginx language-pack-zh-hans
 
 if [ ! $add_apt == '' ];then
     apt-get -y install $add_apt
