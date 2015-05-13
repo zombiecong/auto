@@ -99,7 +99,7 @@ $ source auto rmconfig
 > * 对于Django默认的项目结构project/app/settings.py，需要保证 project 和 app 两个父子文件夹名相同
 > * Django的settings.py文件中需要增加以下两行，以保证静态文件的正确部署，
 
-    ```Python
+    ```python
     STATIC_ROOT = os.path.join(BASE_DIR,  'static') 
     MEDIA_ROOT = os.path.join(BASE_DIR,  'upload')
     ```
@@ -108,7 +108,7 @@ $ source auto rmconfig
 
 > * 因此，开发者也可以在Django的[project-name]/[project-name]/settings.py文件的最后一行增加，
 
-    ```Python
+    ```python
     from settings_local.py import *
     ```
     
