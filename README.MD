@@ -16,7 +16,7 @@
 通过以下命令安装本程序，并进行服务器初始化，
  
 ```bash
-$ git clone http://learning-tech.com:8901/lt/django_auto_deploy.git
+$ git clone https://github.com/zombiecong/auto.git
 $ cd django_auto_deploy/host
 $ bash auto
 ```
